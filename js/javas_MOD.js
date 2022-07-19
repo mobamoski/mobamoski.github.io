@@ -1776,9 +1776,9 @@ const Sign = function () {
             y = Y_price[i]
             difpoc = pocmax - pocnextmax
 
-            if (i <= 1) {
-                buyarrow = "⇧"
-                sellarrow = "⇩"
+            if (i >= 1) {
+                buyarrow = "⇩"
+                sellarrow = "⇧"
                 indecisionarrow = "⌛"
 
                 formatpricemax = pricemax === 0 ? pricemax : +pricemax.toString().split('.')[1]
