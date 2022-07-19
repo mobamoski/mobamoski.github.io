@@ -319,7 +319,7 @@ function Menu() {
                 document.body.style.backgroundColor = '#00008b';
                 break;
             case '3':
-                document.body.style.backgroundColor = '#0f0000';
+                document.body.style.backgroundColor = '#808080';
                 break;
             case '4':
                 document.body.style.backgroundColor = '#686c5e';
@@ -788,7 +788,7 @@ const Sign = function () {
                     fon_svecha[_0xf774x44] = 'green'
                 } else {
                     if (_0xf774x3d[_0xf774x44].close === _0xf774x3d[_0xf774x44].open) {
-                        ctx.fillStyle = '#0f0100';
+                        ctx.fillStyle = '#808080';
                         fon_svecha[_0xf774x44] = 'grey'
                     }
                 }
@@ -2131,10 +2131,10 @@ const Sign = function () {
                     }
                 }
                 if (fon_svecha[i] === 'grey') {
-                    if (procent_rassh < 50) {
+                    if (procent_rassh > 50) {
                         _0xf774x56 = '0'
                     } else {
-                        if (procent_rassh > 50) {
+                        if (procent_rassh < 50) {
                             _0xf774x56 = '0'
                         } else {
                             if (procent_rassh === 50) {
@@ -2172,7 +2172,7 @@ const Sign = function () {
                     arrow_down_y = _0xf774x6f + 330;
                     ctx.font = ur_str_size + 'px Verdana';
                     if (color_text === '#d75c48') {
-                        ArrowDraw(ctx, 'up', _0xf774x70, _0xf774x71, 150, 150, 'green', 1, 'fill');
+                        ArrowDraw(ctx, 'up', _0xf774x70, _0xf774x71, 150, 150, 'green', 1, 'str');
                         ArrowDraw(ctx, 'down', arrow_down_x, arrow_down_y, 150, 150, 'red', 1, 'fill');
                         ctx.fillText(_0xf774x69, _0xf774x70 + 30, arrow_down_y / 1.6);
                         if (strelki_procent === 1) {
@@ -2182,7 +2182,7 @@ const Sign = function () {
                         }
                     } else {
                         if (color_text === '#008f1d') {
-                            ArrowDraw(ctx, 'up', _0xf774x70, _0xf774x71, 150, 150, 'green', 1, 'str');
+                            ArrowDraw(ctx, 'up', _0xf774x70, _0xf774x71, 150, 150, 'green', 1, 'fill');
                             ArrowDraw(ctx, 'down', arrow_down_x, arrow_down_y, 150, 150, 'red', 1, 'str');
                             ctx.fillText(_0xf774x69, _0xf774x70 + 30, arrow_down_y / 1.6);
                             if (strelki_procent === 1) {
@@ -2192,8 +2192,8 @@ const Sign = function () {
                             }
                         } else {
                             if (color_text === '#ffffff') {
-                                ArrowDraw(ctx, 'up', _0xf774x70, _0xf774x71, 150, 150, 'green', 1, 'str');
-                                ArrowDraw(ctx, 'down', arrow_down_x, arrow_down_y, 150, 150, 'red', 1, 'str');
+                                ArrowDraw(ctx, 'up', _0xf774x70, _0xf774x71, 150, 150, 'green', 1, 'fill');
+                                ArrowDraw(ctx, 'down', arrow_down_x, arrow_down_y, 150, 150, 'red', 1, 'fill');
                                 ctx.fillText((_0xf774x69 + ' закр. на макс. объёме'), _0xf774x70 + 30, arrow_down_y / 1.6);
                                 if (strelki_procent === 1) {
                                     ctx.fillStyle = '#fff';
