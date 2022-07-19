@@ -1810,7 +1810,7 @@ const Sign = function () {
                         break;
                     case difprice > 0:
                         color_trend[i] = 'rgba(86, 176, 104, 1)'
-                        arrow_trend[i] = sellarrow
+                        arrow_trend[i] = buyarrow
                         arrow_rate[i] = buyarrow
                         switch (true) {
                             case difprice <= 3:
@@ -1823,7 +1823,7 @@ const Sign = function () {
                         break;
                     case difprice < 0:
                         color_trend[i] = 'rgba(210, 59, 59, 1)'
-                        arrow_trend[i] = buyarrow
+                        arrow_trend[i] = sellarrow
                         arrow_rate[i] = sellarrow
                         switch (true) {
                             case difprice >= -3:
@@ -1936,7 +1936,7 @@ const Sign = function () {
 
                 }
 
-                middle = (qnticks / 2)
+                middle = (qnticks / 3) - 0.75
                 switch (true) {
                     case qntcandles === 1:
                         color_maxx[i] = 'rgb(155,159,155)'
@@ -2144,17 +2144,17 @@ const Sign = function () {
                     }
                 }
                 if (_0xf774x56 === 'up') {
-                    ctx.fillText(_0xf774x6b + procent_rassh, x + (_0xf774x41.ww / 4), y - (parseFloat(max_size) + parseFloat(vremya_size) + parseFloat(max_size) * 2.4));
+                    ctx.fillText(_0xf774x6b + procent_rassh, x + (_0xf774x41.ww / 4), y - (parseFloat(max_size) + parseFloat(vremya_size) + parseFloat(max_size) * 3.6));
                     rash_up = procent_rassh;
                     rash_down = 100 - procent_rassh
                 } else {
                     if (_0xf774x56 === 'down') {
-                        ctx.fillText(_0xf774x6c + procent_rassh, x + (_0xf774x41.ww / 4), y - (parseFloat(max_size) + parseFloat(vremya_size) + parseFloat(max_size) * 2.4));
+                        ctx.fillText(_0xf774x6c + procent_rassh, x + (_0xf774x41.ww / 4), y - (parseFloat(max_size) + parseFloat(vremya_size) + parseFloat(max_size) * 3.6));
                         rash_up = 100 - procent_rassh;
                         rash_down = procent_rassh
                     } else {
                         if (_0xf774x56 === '0') {
-                            ctx.fillText(_0xf774x6d + procent_rassh, x + (_0xf774x41.ww / 4), y - (parseFloat(max_size) + parseFloat(vremya_size) + parseFloat(max_size) * 2.4));
+                            ctx.fillText(_0xf774x6d + procent_rassh, x + (_0xf774x41.ww / 4), y - (parseFloat(max_size) + parseFloat(vremya_size) + parseFloat(max_size) * 3.6));
                             rash_up = procent_rassh;
                             rash_down = procent_rassh
                         }
@@ -2174,30 +2174,30 @@ const Sign = function () {
                     if (color_text === '#d75c48') {
                         ArrowDraw(ctx, 'up', _0xf774x70, _0xf774x71, 150, 150, 'green', 1, 'str');
                         ArrowDraw(ctx, 'down', arrow_down_x, arrow_down_y, 150, 150, 'red', 1, 'fill');
-                        ctx.fillText(_0xf774x69, _0xf774x70 + 30, arrow_down_y / 1.6);
+                        ctx.fillText(_0xf774x69, _0xf774x70 + 30, arrow_down_y / 2.4);
                         if (strelki_procent === 1) {
                             ctx.fillStyle = '#fff';
-                            ctx.fillText(rash_down + '%', _0xf774x70 + 50, arrow_down_y / po_up * 1.5);
+                            ctx.fillText(rash_down + '%', _0xf774x70 + 50, arrow_down_y / po_up * 2.25);
                             ctx.fillText(rash_up + '%', _0xf774x70 + 50, arrow_down_y / po_up)
                         }
                     } else {
                         if (color_text === '#008f1d') {
                             ArrowDraw(ctx, 'up', _0xf774x70, _0xf774x71, 150, 150, 'green', 1, 'fill');
                             ArrowDraw(ctx, 'down', arrow_down_x, arrow_down_y, 150, 150, 'red', 1, 'str');
-                            ctx.fillText(_0xf774x69, _0xf774x70 + 30, arrow_down_y / 1.6);
+                            ctx.fillText(_0xf774x69, _0xf774x70 + 30, arrow_down_y / 2.4);
                             if (strelki_procent === 1) {
                                 ctx.fillStyle = '#fff';
-                                ctx.fillText(rash_down + '%', _0xf774x70 + 50, arrow_down_y / po_up * 1.5);
+                                ctx.fillText(rash_down + '%', _0xf774x70 + 50, arrow_down_y / po_up * 2.25);
                                 ctx.fillText(rash_up + '%', _0xf774x70 + 50, arrow_down_y / po_up)
                             }
                         } else {
                             if (color_text === '#ffffff') {
                                 ArrowDraw(ctx, 'up', _0xf774x70, _0xf774x71, 150, 150, 'green', 1, 'str');
                                 ArrowDraw(ctx, 'down', arrow_down_x, arrow_down_y, 150, 150, 'red', 1, 'str');
-                                ctx.fillText((_0xf774x69 + ' закр. на макс. объёме'), _0xf774x70 + 30, arrow_down_y / 1.6);
+                                ctx.fillText((_0xf774x69 + ' закр. на макс. объёме'), _0xf774x70 + 30, arrow_down_y / 2.4);
                                 if (strelki_procent === 1) {
                                     ctx.fillStyle = '#fff';
-                                    ctx.fillText(rash_down + '%', _0xf774x70 + 50, arrow_down_y / po_up * 1.5);
+                                    ctx.fillText(rash_down + '%', _0xf774x70 + 50, arrow_down_y / po_up * 2.25);
                                     ctx.fillText(rash_up + '%', _0xf774x70 + 50, arrow_down_y / po_up)
                                 }
                             }
