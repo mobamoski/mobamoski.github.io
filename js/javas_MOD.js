@@ -1810,8 +1810,8 @@ const Sign = function () {
                         break;
                     case difprice > 0:
                         color_trend[i] = 'rgba(86, 176, 104, 1)'
-                        arrow_trend[i] = buyarrow
-                        arrow_rate[i] = sellarrow
+                        arrow_trend[i] = sellarrow
+                        arrow_rate[i] = buyarrow
                         switch (true) {
                             case difprice <= 3:
                                 color_rate[i] = 'rgb(4,246,255)'
@@ -1823,8 +1823,8 @@ const Sign = function () {
                         break;
                     case difprice < 0:
                         color_trend[i] = 'rgba(210, 59, 59, 1)'
-                        arrow_trend[i] = sellarrow
-                        arrow_rate[i] = buyarrow
+                        arrow_trend[i] = buyarrow
+                        arrow_rate[i] = sellarrow
                         switch (true) {
                             case difprice >= -3:
                                 color_rate[i] = 'rgb(4,246,255)'
