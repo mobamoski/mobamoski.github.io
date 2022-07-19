@@ -295,7 +295,7 @@ function Menu() {
     max_obj = check_1('max_obj');
     max_obj_color = check_1('max_obj_color');
     Strelki_On = stsrelki_move();
-    strelki_procent = 0;
+    strelki_procent = check_1('strelki_procent');
     font_size = font_size_s('font_size');
     blok_shema = blok_shema_0('blok_shema');
     odinak = check_1('odinak');
