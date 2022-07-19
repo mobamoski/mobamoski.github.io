@@ -1936,7 +1936,7 @@ const Sign = function () {
 
                 }
 
-                middle = (qnticks / 2) - 0.5
+                middle = (qnticks / 2) - 1
                 switch (true) {
                     case qntcandles === 1:
                         color_maxx[i] = 'rgb(155,159,155)'
@@ -2104,13 +2104,13 @@ const Sign = function () {
                 procent_rassh = parseFloat(procent_rassh.toFixed());
                 ctx.font = str_min_size + 'px Verdana';
                 if (fon_svecha[i] === 'red') {
-                    if (procent_rassh < 50) {
+                    if (procent_rassh < 60) {
                         _0xf774x56 = 'down'
                     } else {
-                        if (procent_rassh > 50) {
+                        if (procent_rassh > 60) {
                             _0xf774x56 = 'down'
                         } else {
-                            if (procent_rassh === 50) {
+                            if (procent_rassh === 60) {
                                 _0xf774x56 = '0'
                             }
                         }
@@ -2118,26 +2118,26 @@ const Sign = function () {
                     procent_rassh = 100 - procent_rassh
                 }
                 if (fon_svecha[i] === 'green') {
-                    if (procent_rassh < 50) {
+                    if (procent_rassh < 60) {
                         _0xf774x56 = 'up'
                     } else {
-                        if (procent_rassh > 50) {
+                        if (procent_rassh > 60) {
                             _0xf774x56 = 'up'
                         } else {
-                            if (procent_rassh === 50) {
+                            if (procent_rassh === 60) {
                                 _0xf774x56 = '0'
                             }
                         }
                     }
                 }
                 if (fon_svecha[i] === 'grey') {
-                    if (procent_rassh < 50) {
+                    if (procent_rassh < 60) {
                         _0xf774x56 = '0'
                     } else {
-                        if (procent_rassh > 50) {
+                        if (procent_rassh > 60) {
                             _0xf774x56 = '0'
                         } else {
-                            if (procent_rassh === 50) {
+                            if (procent_rassh === 60) {
                                 _0xf774x56 = '0'
                             }
                         }
