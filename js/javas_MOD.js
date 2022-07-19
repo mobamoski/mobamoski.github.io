@@ -2782,8 +2782,9 @@ const Sign = function () {
     main.soc($('#pair').attr('val'), $('#size').val())
 
     let _0xf774x7b = document.createElement('a');
+	 _0xf774x7b.setAttribute('href', 'https://t.me/tsbinary');
     let _0xf774x7c = document.createElement('LABEL');
-    _0xf774x7c.textContent = ' Ver 0.0.3.1 ';
+    _0xf774x7c.textContent = ' Ver 3.9.9 ';
     _0xf774x7c.style.right = '15px';
     _0xf774x7c.style.bottom = '5px';
     _0xf774x7c.style.position = 'absolute';
