@@ -1,0 +1,145 @@
+body{ 
+	background: #21252c; 
+	background-color: #21252c; 
+	padding:0px; 
+	margin:0px;
+	background-image: none; 
+	 width:100vw;  
+	 height: 100vh;  
+
+background-position: center 40px;
+/* background-repeat: none; */
+/* -webkit-background-size: 50% auto; */
+/* -moz-background-size: 50% auto; */
+/* background-size: 50% auto; */
+/* -o-background-size: 50% auto; */
+
+background-size: 300px 400px;
+/* background-position: bottom right; */
+background-repeat: no-repeat;
+	/* background-repeat: repeat-y; */
+	/* background-position: 500px 50px; */
+}
+	
+	
+	
+.hiden {
+	color:#00ffff;
+	padding:0px;
+	
+	top:0px;
+	right:100px;
+}
+
+.divinp{
+	position:fixed;
+	z-index: 101;
+	top:0px;
+	right:0px;
+}
+.select{
+padding:5px;
+	font-size: 18px;
+	background: #2e3e52;
+	color: #fff;
+	border: none;
+	width:150px;
+	left:10px;
+	border-radius: 2px;
+}
+#period{
+	width: 50px;
+}
+#Strelki_On{
+	position:fixed;
+	top:-200px;
+	width: 300px;
+}
+.close_1 {
+	color: #fff;
+	position:fixed;
+	top:465px;
+	left:50px;
+}
+.str_green {
+	position:fixed;
+	top:315px;
+	/* left:0px; */
+}
+.str_red {
+	position:fixed;
+	top:490px;
+}
+#Menu{
+	font-size: 18px;
+	color: #fff;
+	width: 200px;
+	/* font-family: Roboto,"sans-serif",Arial; */
+}
+a {
+color:#00ffff;
+text-decoration:none
+}
+
+a:active {
+color:#00ffff;
+text-decoration:none
+}
+
+a:visited {
+color:#87ceeb;
+text-decoration:none
+}
+
+a:hover {
+color:#ffd800;
+text-decoration: underline
+}
+
+.selectdiv{
+	padding:0px;
+	position:fixed;
+	top:0px;
+	right:250px;
+}
+.sel{
+	padding: 5px 0px 5px 22px;
+	cursor:pointer!Important;
+	font-family: Roboto,"sans-serif",Arial;
+}
+.sels{
+	padding: 5px 0px 5px 22px;
+}
+.sel:hover{
+	background: #1e3046;
+}
+.divscrol{
+ position:relative;
+ width:200px;
+ max-height: 80vh;
+ overflow-x: hidden;
+ overflow-y: auto;
+ display:none;
+}
+.imgsel{
+	position:fixed;
+	left: 1px;
+	
+}
+.preload{
+position:fixed;
+z-index: 100;
+top:0px;
+left:0px;
+opacity: 0.5;
+display:block;
+width:100vw;
+height:100vh;
+background:url(../img/pre.gif) #424151 no-repeat;
+background-position: center center;
+background-repeat: none;
+-webkit-background-size: 100% auto;
+-moz-background-size: 100% auto;
+background-size: 100% auto;
+-o-background-size: 100% auto;
+}
