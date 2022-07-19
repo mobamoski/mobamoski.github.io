@@ -52,10 +52,10 @@ function ArrowDraw(_0xf774xb, _0xf774xc, _0xf774xd, _0xf774xe, _0xf774xf, _0xf77
     }
     let fun;
     if (_0xf774x13 === 'str') {
-        fun = 2
+        fun = 1
     }
     if (_0xf774x13 === 'fill') {
-        fun = 1
+        fun = 2
     }
     _0xf774xb.beginPath();
     _0xf774xb.strokeStyle = _0xf774x11;
@@ -319,7 +319,7 @@ function Menu() {
                 document.body.style.backgroundColor = '#00008b';
                 break;
             case '3':
-                document.body.style.backgroundColor = '#808080';
+                document.body.style.backgroundColor = '#0f0000';
                 break;
             case '4':
                 document.body.style.backgroundColor = '#686c5e';
@@ -788,7 +788,7 @@ const Sign = function () {
                     fon_svecha[_0xf774x44] = 'green'
                 } else {
                     if (_0xf774x3d[_0xf774x44].close === _0xf774x3d[_0xf774x44].open) {
-                        ctx.fillStyle = '#808080';
+                        ctx.fillStyle = '#0f0100';
                         fon_svecha[_0xf774x44] = 'grey'
                     }
                 }
@@ -2097,17 +2097,17 @@ const Sign = function () {
             }
             if (strelki_procent === 1) {
                 ctx.fillStyle = color_text;
-                const _0xf774x6c = '⬈',
-                    _0xf774x6b = '⬊',
+                const _0xf774x6b = '⬈',
+                    _0xf774x6c = '⬊',
                     _0xf774x6d = '⬍';
                 procent_rassh = (max_p_find * 100 / _0xf774x55);
                 procent_rassh = parseFloat(procent_rassh.toFixed());
                 ctx.font = str_min_size + 'px Verdana';
                 if (fon_svecha[i] === 'red') {
-                    if (procent_rassh > 50) {
+                    if (procent_rassh < 50) {
                         _0xf774x56 = 'down'
                     } else {
-                        if (procent_rassh < 50) {
+                        if (procent_rassh > 50) {
                             _0xf774x56 = 'down'
                         } else {
                             if (procent_rassh === 50) {
@@ -2118,10 +2118,10 @@ const Sign = function () {
                     procent_rassh = 100 - procent_rassh
                 }
                 if (fon_svecha[i] === 'green') {
-                    if (procent_rassh > 50) {
+                    if (procent_rassh < 50) {
                         _0xf774x56 = 'up'
                     } else {
-                        if (procent_rassh < 50) {
+                        if (procent_rassh > 50) {
                             _0xf774x56 = 'up'
                         } else {
                             if (procent_rassh === 50) {
@@ -2168,37 +2168,37 @@ const Sign = function () {
                     const _0xf774x6f = (Qvalx.height() / 10);
                     const _0xf774x70 = _0xf774x6e,
                         _0xf774x71 = _0xf774x6f;
-                    arrow_down_y = _0xf774x6e
-                    arrow_down_x = _0xf774x6f + 330;
+                    arrow_down_x = _0xf774x6e
+                    arrow_down_y = _0xf774x6f + 330;
                     ctx.font = ur_str_size + 'px Verdana';
                     if (color_text === '#d75c48') {
                         ArrowDraw(ctx, 'up', _0xf774x70, _0xf774x71, 150, 150, 'green', 1, 'str');
-                        ArrowDraw(ctx, 'down', arrow_down_y, arrow_down_x, 150, 150, 'red', 1, 'fill');
-                        ctx.fillText(_0xf774x69, _0xf774x70 + 30, arrow_down_x / 1.6);
+                        ArrowDraw(ctx, 'down', arrow_down_x, arrow_down_y, 150, 150, 'red', 1, 'str');
+                        ctx.fillText(_0xf774x69, _0xf774x70 + 30, arrow_down_y / 1.6);
                         if (strelki_procent === 1) {
                             ctx.fillStyle = '#fff';
-                            ctx.fillText(rash_down + '%', _0xf774x70 + 50, arrow_down_x / po_up * 1.5);
-                            ctx.fillText(rash_up + '%', _0xf774x70 + 50, arrow_down_x / po_up)
+                            ctx.fillText(rash_down + '%', _0xf774x70 + 50, arrow_down_y / po_up * 1.5);
+                            ctx.fillText(rash_up + '%', _0xf774x70 + 50, arrow_down_y / po_up)
                         }
                     } else {
                         if (color_text === '#008f1d') {
                             ArrowDraw(ctx, 'up', _0xf774x70, _0xf774x71, 150, 150, 'green', 1, 'fill');
-                            ArrowDraw(ctx, 'down', arrow_down_y, arrow_down_x, 150, 150, 'red', 1, 'str');
-                            ctx.fillText(_0xf774x69, _0xf774x70 + 30, arrow_down_x / 1.6);
+                            ArrowDraw(ctx, 'down', arrow_down_x, arrow_down_y, 150, 150, 'red', 1, 'fill');
+                            ctx.fillText(_0xf774x69, _0xf774x70 + 30, arrow_down_y / 1.6);
                             if (strelki_procent === 1) {
                                 ctx.fillStyle = '#fff';
-                                ctx.fillText(rash_down + '%', _0xf774x70 + 50, arrow_down_x / po_up * 1.5);
-                                ctx.fillText(rash_up + '%', _0xf774x70 + 50, arrow_down_x / po_up)
+                                ctx.fillText(rash_down + '%', _0xf774x70 + 50, arrow_down_y / po_up * 1.5);
+                                ctx.fillText(rash_up + '%', _0xf774x70 + 50, arrow_down_y / po_up)
                             }
                         } else {
                             if (color_text === '#ffffff') {
-                                ArrowDraw(ctx, 'up', _0xf774x70, _0xf774x71, 150, 150, 'green', 1, 'str');
-                                ArrowDraw(ctx, 'down', arrow_down_y, arrow_down_x, 150, 150, 'red', 1, 'str');
-                                ctx.fillText((_0xf774x69 + ' закр. на макс. объёме'), _0xf774x70 + 30, arrow_down_x / 1.6);
+                                ArrowDraw(ctx, 'up', _0xf774x70, _0xf774x71, 150, 150, 'green', 1, 'fill');
+                                ArrowDraw(ctx, 'down', arrow_down_x, arrow_down_y, 150, 150, 'red', 1, 'fill');
+                                ctx.fillText((_0xf774x69 + ' закр. на макс. объёме'), _0xf774x70 + 30, arrow_down_y / 1.6);
                                 if (strelki_procent === 1) {
                                     ctx.fillStyle = '#fff';
-                                    ctx.fillText(rash_down + '%', _0xf774x70 + 50, arrow_down_x / po_up * 1.5);
-                                    ctx.fillText(rash_up + '%', _0xf774x70 + 50, arrow_down_x / po_up)
+                                    ctx.fillText(rash_down + '%', _0xf774x70 + 50, arrow_down_y / po_up * 1.5);
+                                    ctx.fillText(rash_up + '%', _0xf774x70 + 50, arrow_down_y / po_up)
                                 }
                             }
                         }
