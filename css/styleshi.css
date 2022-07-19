@@ -38,17 +38,17 @@ background-repeat: no-repeat;
 	right:0px;
 }
 .select{
-padding:5px;
-	font-size: 18px;
+padding:2px;
+	font-size: 10px;
 	background: #2e3e52;
 	color: #fff;
 	border: none;
-	width:180px;
+	width:110px;
 	left:50px;
-	border-radius: 2px;
+	border-radius: 0px;
 }
 #period{
-	width: 50px;
+	width: 25px;
 }
 #Strelki_On{
 	position:fixed;
@@ -73,7 +73,7 @@ padding:5px;
 #Menu{
 	font-size: 18px;
 	color: #fff;
-	width: 200px;
+	width: 250px;
 	/* font-family: Roboto,"sans-serif",Arial; */
 }
 a {
