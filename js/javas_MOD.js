@@ -48,14 +48,14 @@ function ArrowDraw(_0xf774xb, _0xf774xc, _0xf774xd, _0xf774xe, _0xf774xf, _0xf77
         rasp = 1
     }
     if (_0xf774xc === 'down') {
-        rasp = 2
+        rasp = -1
     }
     let fun;
     if (_0xf774x13 === 'str') {
-        fun = 1
+        fun = 2
     }
     if (_0xf774x13 === 'fill') {
-        fun = -1
+        fun = 1
     }
     _0xf774xb.beginPath();
     _0xf774xb.strokeStyle = _0xf774x11;
@@ -1063,8 +1063,8 @@ const Sign = function () {
         let po_up,
             procent_rassh,
             rash_down,
-            arrow_down_x,y,
-            arrow_down_y,x,
+            arrow_down_x,x,
+            arrow_down_y,y,
             qnticks;
 
        let color_trend = [],
@@ -1776,9 +1776,9 @@ const Sign = function () {
             y = Y_price[i]
             difpoc = pocmax - pocnextmax
 
-            if (i >= 1) {
-                buyarrow = "⇩"
-                sellarrow = "⇧"
+            if (i <= 1) {
+                buyarrow = "⇧"
+                sellarrow = "⇩"
                 indecisionarrow = "⌛"
 
                 formatpricemax = pricemax === 0 ? pricemax : +pricemax.toString().split('.')[1]
@@ -1808,28 +1808,28 @@ const Sign = function () {
                         arrow_trend[i] = indecisionarrow
                         arrow_rate[i] = indecisionarrow
                         break;
-                    case difprice < 0:
+                    case difprice > 0:
                         color_trend[i] = 'rgba(86, 176, 104, 1)'
                         arrow_trend[i] = buyarrow
                         arrow_rate[i] = buyarrow
                         switch (true) {
-                            case difprice >= 3:
+                            case difprice <= 3:
                                 color_rate[i] = 'rgb(4,246,255)'
                                 break;
-                            case difprice < 3:
+                            case difprice > 3:
                                 color_rate[i] = 'rgb(255,224,0)'
                                 break;
                         }
                         break;
-                    case difprice > 0:
+                    case difprice < 0:
                         color_trend[i] = 'rgba(210, 59, 59, 1)'
                         arrow_trend[i] = sellarrow
                         arrow_rate[i] = sellarrow
                         switch (true) {
-                            case difprice <= -3:
+                            case difprice >= -3:
                                 color_rate[i] = 'rgb(4,246,255)'
                                 break;
-                            case difprice > -3:
+                            case difprice < -3:
                                 color_rate[i] = 'rgb(255,224,0)'
                                 break;
                         }
@@ -1847,9 +1847,9 @@ const Sign = function () {
                         color_poc[i] = 'rgb(155,159,155)'
                         arrow_poc[i] = indecisionarrow
                         break;
-                    case difpoc < 0:
+                    case difpoc > 0:
                         switch (true) {
-                            case difpoc >= 3:
+                            case difpoc <= 3:
                                 switch (true) {
                                     case color_trend[i] === 'rgba(86, 176, 104, 1)':
                                         arrow_poc[i] = buyarrow
@@ -1863,7 +1863,7 @@ const Sign = function () {
                                 }
                                 color_poc[i] = 'rgb(4,246,255)'
                                 break;
-                            case difpoc < 3:
+                            case difpoc > 3:
                                 switch (true) {
                                     case color_trend[i] === 'rgba(86, 176, 104, 1)':
                                         arrow_poc[i] = buyarrow
@@ -1879,7 +1879,7 @@ const Sign = function () {
                                 break;
                         }
                         break;
-                    case difpoc > 0 :
+                    case difpoc < 0 :
                         color_poc[i] = 'rgb(155,159,155)'
                         arrow_poc[i] = indecisionarrow
                         break;
@@ -1942,28 +1942,28 @@ const Sign = function () {
                         color_maxx[i] = 'rgb(155,159,155)'
                         arrow_maxx[i] = indecisionarrow
                         break;
-                    case lengthmax < middle && color_trend[i] === 'rgba(210, 59, 59, 1)':
+                    case lengthmax > middle && color_trend[i] === 'rgba(210, 59, 59, 1)':
                         arrow_maxx[i] = buyarrow
-                        color_maxx[i] = 'rgb(255,224,0)'
-                        break;
-                    case lengthmax > middle && color_trend[i] === 'rgba(86, 176, 104, 1)':
-                        arrow_maxx[i] = sellarrow
                         color_maxx[i] = 'rgb(255,224,0)'
                         break;
                     case lengthmax < middle && color_trend[i] === 'rgba(86, 176, 104, 1)':
+                        arrow_maxx[i] = sellarrow
+                        color_maxx[i] = 'rgb(255,224,0)'
+                        break;
+                    case lengthmax > middle && color_trend[i] === 'rgba(86, 176, 104, 1)':
                         arrow_maxx[i] = buyarrow
                         color_maxx[i] = 'rgb(4,246,255)'
                         break;
-                    case lengthmax > middle && color_trend[i] === 'rgba(210, 59, 59, 1)':
+                    case lengthmax < middle && color_trend[i] === 'rgba(210, 59, 59, 1)':
                         arrow_maxx[i] = sellarrow
                         color_maxx[i] = 'rgb(4,246,255)'
                         break;
 
-                    case lengthmax < middle &&  color_trend[i] === 'rgb(255,255,255)' :
+                    case lengthmax > middle &&  color_trend[i] === 'rgb(255,255,255)' :
                         arrow_maxx[i] = buyarrow
                         color_maxx[i] = 'rgb(255,255,255)'
                         break;
-                    case lengthmax > middle &&  color_trend[i] === 'rgb(255,255,255)' :
+                    case lengthmax < middle &&  color_trend[i] === 'rgb(255,255,255)' :
                         arrow_maxx[i] = sellarrow
                         color_maxx[i] = 'rgb(255,255,255)'
                         break;
@@ -2097,8 +2097,8 @@ const Sign = function () {
             }
             if (strelki_procent === 1) {
                 ctx.fillStyle = color_text;
-                const _0xf774x6b = '⬊',
-                    _0xf774x6c = '⬈',
+                const _0xf774x6c = '⬈',
+                    _0xf774x6b = '⬊',
                     _0xf774x6d = '⬍';
                 procent_rassh = (max_p_find * 100 / _0xf774x55);
                 procent_rassh = parseFloat(procent_rassh.toFixed());
@@ -2131,10 +2131,10 @@ const Sign = function () {
                     }
                 }
                 if (fon_svecha[i] === 'grey') {
-                    if (procent_rassh > 50) {
+                    if (procent_rassh < 50) {
                         _0xf774x56 = '0'
                     } else {
-                        if (procent_rassh < 50) {
+                        if (procent_rassh > 50) {
                             _0xf774x56 = '0'
                         } else {
                             if (procent_rassh === 50) {
