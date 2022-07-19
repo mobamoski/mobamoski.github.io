@@ -14,8 +14,8 @@ background-position: center 40px;
 /* background-size: 50% auto; */
 /* -o-background-size: 50% auto; */
 
-background-size: 500px 400px;
-/* background-position: bottom right; */
+background-size: 450px 400px;
+ background-position: top center right; 
 background-repeat: no-repeat;
 	/* background-repeat: repeat-y; */
 	/* background-position: 500px 50px; */
