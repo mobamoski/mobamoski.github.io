@@ -295,7 +295,7 @@ function Menu() {
     max_obj = check_1('max_obj');
     max_obj_color = check_1('max_obj_color');
     Strelki_On = stsrelki_move();
-    strelki_procent = check_1('strelki_procent');
+    strelki_procent = 0;
     font_size = font_size_s('font_size');
     blok_shema = blok_shema_0('blok_shema');
     odinak = check_1('odinak');
@@ -1776,10 +1776,10 @@ const Sign = function () {
             y = Y_price[i]
             difpoc = pocmax - pocnextmax
 
-            if (i <= 1) {
-                buyarrow = "⇧"
-                sellarrow = "⇩"
-                indecisionarrow = "⌛"
+            if (i <= 999999999) {
+                buyarrow = "🟢"
+                sellarrow = "🔴"
+                indecisionarrow = ""
 
                 formatpricemax = pricemax === 0 ? pricemax : +pricemax.toString().split('.')[1]
                 formatpricenextmax = pricenextmax2 === 0 ? pricenextmax2 : +pricenextmax2.toString().split('.')[1]
@@ -2173,7 +2173,7 @@ const Sign = function () {
                     ctx.font = ur_str_size + 'px Verdana';
                     if (color_text === '#d75c48') {
                         ArrowDraw(ctx, 'up', _0xf774x70, _0xf774x71, 150, 150, 'green', 1, 'str');
-                        ArrowDraw(ctx, 'down', arrow_down_x, arrow_down_y, 150, 150, 'red', 1, 'str');
+                        ArrowDraw(ctx, 'down', arrow_down_x, arrow_down_y, 150, 150, 'red', 1, 'fill');
                         ctx.fillText(_0xf774x69, _0xf774x70 + 30, arrow_down_y / 1.6);
                         if (strelki_procent === 1) {
                             ctx.fillStyle = '#fff';
@@ -2182,7 +2182,7 @@ const Sign = function () {
                         }
                     } else {
                         if (color_text === '#008f1d') {
-                            ArrowDraw(ctx, 'up', _0xf774x70, _0xf774x71, 150, 150, 'green', 1, 'str');
+                            ArrowDraw(ctx, 'up', _0xf774x70, _0xf774x71, 150, 150, 'green', 1, 'fill');
                             ArrowDraw(ctx, 'down', arrow_down_x, arrow_down_y, 150, 150, 'red', 1, 'str');
                             ctx.fillText(_0xf774x69, _0xf774x70 + 30, arrow_down_y / 1.6);
                             if (strelki_procent === 1) {
@@ -2192,8 +2192,8 @@ const Sign = function () {
                             }
                         } else {
                             if (color_text === '#ffffff') {
-                                ArrowDraw(ctx, 'up', _0xf774x70, _0xf774x71, 150, 150, 'green', 1, 'fill');
-                                ArrowDraw(ctx, 'down', arrow_down_x, arrow_down_y, 150, 150, 'red', 1, 'fill');
+                                ArrowDraw(ctx, 'up', _0xf774x70, _0xf774x71, 150, 150, 'green', 1, 'str');
+                                ArrowDraw(ctx, 'down', arrow_down_x, arrow_down_y, 150, 150, 'red', 1, 'str');
                                 ctx.fillText((_0xf774x69 + ' закр. на макс. объёме'), _0xf774x70 + 30, arrow_down_y / 1.6);
                                 if (strelki_procent === 1) {
                                     ctx.fillStyle = '#fff';
