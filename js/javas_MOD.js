@@ -114,8 +114,8 @@ function OpenMenu() {
 function stsrelki_move() {
     document.getElementById('strelki_check').onclick = function () {
         if (document.getElementById('strelki_check').checked) {
-            if (localStorage.getItem('open_menu') === 'true') {
-                localStorage.setItem('strelki_check', 'true');
+            if (localStorage.getItem('open_menu') === 'false') {
+                localStorage.setItem('strelki_check', 'false');
                 return 1
             }
         } else {
@@ -124,15 +124,15 @@ function stsrelki_move() {
             return 0
         }
     };
-    if (localStorage.getItem('open_menu') === 'true') {
-        if (localStorage.getItem('strelki_check') === 'true') {
+    if (localStorage.getItem('open_menu') === 'false') {
+        if (localStorage.getItem('strelki_check') === 'false') {
             document.getElementById('strelki_check').setAttribute('checked', 'checked');
             return 1
         } else {
             return 0
         }
     } else {
-        if (localStorage.getItem('strelki_check') === 'true') {
+        if (localStorage.getItem('strelki_check') === 'false') {
             document.getElementById('strelki_check').setAttribute('checked', 'checked');
             return 1
         } else {
