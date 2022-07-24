@@ -1779,7 +1779,6 @@ const Sign = function () {
             if (i <= 999999999) {
                 buyarrow = "🟢"
                 sellarrow = "🔴"
-                indecisionarrow = ""
 
                 formatpricemax = pricemax === 0 ? pricemax : +pricemax.toString().split('.')[1]
                 formatpricenextmax = pricenextmax2 === 0 ? pricenextmax2 : +pricenextmax2.toString().split('.')[1]
@@ -2734,7 +2733,7 @@ const Sign = function () {
         divscrol.hide('blind')
     });
     period.change(function () {
-        if ($(this).val() < 2) {
+        if ($(this).val() < 1) {
             $(this).val(2)
         }
         if ($(this).val() > 72) {
