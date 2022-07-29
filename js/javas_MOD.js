@@ -1779,6 +1779,7 @@ const Sign = function () {
             if (i <= 999999999) {
                 buyarrow = "🟢"
                 sellarrow = "🔴"
+				indecisionarrow = ""
 
                 formatpricemax = pricemax === 0 ? pricemax : +pricemax.toString().split('.')[1]
                 formatpricenextmax = pricenextmax2 === 0 ? pricenextmax2 : +pricenextmax2.toString().split('.')[1]
