@@ -112,28 +112,28 @@ function OpenMenu() {
     }
 }
 function stsrelki_move() {
-    document.getElementById('strelki_check').onclick = function () {
-        if (document.getElementById('strelki_check').checked) {
-            if (localStorage.getItem('open_menu') === 'true') {
-                localStorage.setItem('strelki_check', 'true');
+    document.getElementById('0').onclick = function () {
+        if (document.getElementById('0').checked) {
+            if (localStorage.getItem('open_menu') === 'false') {
+                localStorage.setItem('0', 'false');
                 return 1
             }
         } else {
             document.getElementById('Strelki_On').style.display = 'none';
-            localStorage.setItem('strelki_check', 'false');
+            localStorage.setItem('0', 'false');
             return 0
         }
     };
-    if (localStorage.getItem('open_menu') === 'true') {
-        if (localStorage.getItem('strelki_check') === 'true') {
-            document.getElementById('strelki_check').setAttribute('checked', 'checked');
+    if (localStorage.getItem('open_menu') === 'false') {
+        if (localStorage.getItem('0') === 'false') {
+            document.getElementById('0').setAttribute('checked', 'checked');
             return 1
         } else {
             return 0
         }
     } else {
-        if (localStorage.getItem('strelki_check') === 'true') {
-            document.getElementById('strelki_check').setAttribute('checked', 'checked');
+        if (localStorage.getItem('0') === 'false') {
+            document.getElementById('0').setAttribute('checked', 'checked');
             return 1
         } else {
             return 0
@@ -294,7 +294,7 @@ function Menu() {
     timer = check_1('timer');
     max_obj = check_1('max_obj');
     max_obj_color = check_1('max_obj_color');
-    Strelki_On = stsrelki_move();
+    Strelki_On = 0;
     strelki_procent = 0;
     font_size = font_size_s('font_size');
     blok_shema = blok_shema_0('blok_shema');
@@ -1779,7 +1779,7 @@ const Sign = function () {
             if (i <= 999999999) {
                 buyarrow = "🟢"
                 sellarrow = "🔴"
-                indecisionarrow = ""
+				indecisionarrow = ""
 
                 formatpricemax = pricemax === 0 ? pricemax : +pricemax.toString().split('.')[1]
                 formatpricenextmax = pricenextmax2 === 0 ? pricenextmax2 : +pricenextmax2.toString().split('.')[1]
@@ -2734,7 +2734,7 @@ const Sign = function () {
         divscrol.hide('blind')
     });
     period.change(function () {
-        if ($(this).val() < 2) {
+        if ($(this).val() < 1) {
             $(this).val(2)
         }
         if ($(this).val() > 72) {
@@ -2784,9 +2784,9 @@ const Sign = function () {
     let _0xf774x7b = document.createElement('a');
 	 _0xf774x7b.setAttribute('href', 'https://t.me/tsbinary');
     let _0xf774x7c = document.createElement('LABEL');
-    _0xf774x7c.textContent = ' Ver 3.9.9 ';
-    _0xf774x7c.style.right = '15px';
-    _0xf774x7c.style.bottom = '5px';
+    _0xf774x7c.textContent = ' Ver 4.0 ';
+    _0xf774x7c.style.right = '20px';
+    _0xf774x7c.style.bottom = '10px';
     _0xf774x7c.style.position = 'absolute';
     _0xf774x7b.appendChild(_0xf774x7c);
     document.body.appendChild(_0xf774x7b);
