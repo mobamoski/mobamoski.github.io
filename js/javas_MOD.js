@@ -1777,8 +1777,8 @@ const Sign = function () {
             difpoc = pocmax - pocnextmax
 
             if (i <= 999999999) {
-                buyarrow = "🟢"
-                sellarrow = "🔴"
+                buyarrow = "🡅"
+                sellarrow = "🡇"
 				indecisionarrow = ""
 
                 formatpricemax = pricemax === 0 ? pricemax : +pricemax.toString().split('.')[1]
