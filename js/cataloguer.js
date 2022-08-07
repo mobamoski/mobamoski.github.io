@@ -43,39 +43,9 @@ function getSignals(event) {
         var paritiesOTC, parities, days, percentage, time, market, params, text;
         return __generator(this, function (_a) {
             paritiesOTC = [
-                "AUDCAD-OTC",
-"AUDCHF-OTC",
-"AUDJPY-OTC",
-"AUDNZD-OTC",
-"AUDUSD-OTC",
-"BTCUSD-OTC",
-"CADCHF-OTC",
-"CADJPY-OTC",
-"CHFJPY-OTC",
-"ETHUSD-OTC",
-"EURAUD-OTC",
-"EURCAD-OTC",
-"EURCHF-OTC",
+                
 "EURGBP-OTC",
-"EURJPY-OTC",
-"EURNZD-OTC",
-"EURUSD-OTC",
-"GBPAUD-OTC",
-"GBPCAD-OTC",
-"GBPCHF-OTC",
-"GBPJPY-OTC",
-"GBPNZD-OTC",
-"GBPUSD-OTC",
-"LTCUSD-OTC",
-"NZDCAD-OTC",
-"NZDCHF-OTC",
-"NZDJPY-OTC",
-"NZDUSD-OTC",
-"USDCAD-OTC",
-"USDCHF-OTC",
-"USDJPY-OTC",
-"XAGUSD-OTC",
-"XAUUSD-OTC",
+
             
             ];
             parities = [
