@@ -1,0 +1,36 @@
+* {
+  --primary :#333a41;
+  --dark: #424242;
+  --dark-light: #BEBEBE;
+  --red: #CF0000;
+  --green-light: #7DB382;
+  --blue: #F2F6FA;
+  margin:0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.ads-mobile {
+  display: none;
+}
+
+.ads-desktop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+@media (max-width: 720px)
+{
+  .ads-desktop {
+    display: none;
+  }
+
+  .ads-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+}
