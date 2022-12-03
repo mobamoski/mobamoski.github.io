@@ -112,28 +112,28 @@ function OpenMenu() {
     }
 }
 function stsrelki_move() {
-    document.getElementById('0').onclick = function () {
-        if (document.getElementById('0').checked) {
+    document.getElementById('strelki_check').onclick = function () {
+        if (document.getElementById('strelki_check').checked) {
             if (localStorage.getItem('open_menu') === 'false') {
-                localStorage.setItem('0', 'false');
+                localStorage.setItem('strelki_check', 'false');
                 return 1
             }
         } else {
             document.getElementById('Strelki_On').style.display = 'none';
-            localStorage.setItem('0', 'false');
+            localStorage.setItem('strelki_check', 'false');
             return 0
         }
     };
     if (localStorage.getItem('open_menu') === 'false') {
-        if (localStorage.getItem('0') === 'false') {
-            document.getElementById('0').setAttribute('checked', 'checked');
+        if (localStorage.getItem('strelki_check') === 'false') {
+            document.getElementById('strelki_check').setAttribute('checked', 'checked');
             return 1
         } else {
             return 0
         }
     } else {
-        if (localStorage.getItem('0') === 'false') {
-            document.getElementById('0').setAttribute('checked', 'checked');
+        if (localStorage.getItem('strelki_check') === 'false') {
+            document.getElementById('strelki_check').setAttribute('checked', 'checked');
             return 1
         } else {
             return 0
@@ -294,7 +294,7 @@ function Menu() {
     timer = check_1('timer');
     max_obj = check_1('max_obj');
     max_obj_color = check_1('max_obj_color');
-    Strelki_On = 0;
+    Strelki_On = stsrelki_move();
     strelki_procent = 0;
     font_size = font_size_s('font_size');
     blok_shema = blok_shema_0('blok_shema');
