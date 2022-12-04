@@ -51,7 +51,7 @@ function ArrowDraw(_0xf774xb, _0xf774xc, _0xf774xd, _0xf774xe, _0xf774xf, _0xf77
         rasp = -1
     }
     let fun;
-    if (_0xf774x13 === 'fill') {
+    if (_0xf774x13 === 'str') {
         fun = 1
     }
     if (_0xf774x13 === 'fill') {
