@@ -85,7 +85,7 @@ function ArrowDraw(_0xf774xb, _0xf774xc, _0xf774xd, _0xf774xe, _0xf774xf, _0xf77
     _0xf774xb.closePath();
     _0xf774xb.stroke();
     if (fun === 2) {
-        _0xf774xb.str()
+        _0xf774xb.fill()
     }
 }
 function OpenMenu() {
@@ -114,8 +114,8 @@ function OpenMenu() {
 function stsrelki_move() {
     document.getElementById('strelki_check').onclick = function () {
         if (document.getElementById('strelki_check').checked) {
-            if (localStorage.getItem('open_menu') === 'false') {
-                localStorage.setItem('strelki_check', 'false');
+            if (localStorage.getItem('open_menu') === 'true') {
+                localStorage.setItem('strelki_check', 'true');
                 return 1
             }
         } else {
@@ -124,15 +124,15 @@ function stsrelki_move() {
             return 0
         }
     };
-    if (localStorage.getItem('open_menu') === 'false') {
-        if (localStorage.getItem('strelki_check') === 'false') {
+    if (localStorage.getItem('open_menu') === 'true') {
+        if (localStorage.getItem('strelki_check') === 'true') {
             document.getElementById('strelki_check').setAttribute('checked', 'checked');
             return 1
         } else {
             return 0
         }
     } else {
-        if (localStorage.getItem('strelki_check') === 'false') {
+        if (localStorage.getItem('strelki_check') === 'true') {
             document.getElementById('strelki_check').setAttribute('checked', 'checked');
             return 1
         } else {
@@ -295,7 +295,7 @@ function Menu() {
     max_obj = check_1('max_obj');
     max_obj_color = check_1('max_obj_color');
     Strelki_On = stsrelki_move();
-    strelki_procent = 0;
+    strelki_procent = check_1('strelki_procent');
     font_size = font_size_s('font_size');
     blok_shema = blok_shema_0('blok_shema');
     odinak = check_1('odinak');
@@ -781,11 +781,11 @@ const Sign = function () {
             open_sv[_0xf774x44] = _0xf774x3d[_0xf774x44].open;
             if (_0xf774x3d[_0xf774x44].close < _0xf774x3d[_0xf774x44].open) {
                 ctx.fillStyle = '#d75c48';
-                fon_svecha[_0xf774x44] = 'black'
+                fon_svecha[_0xf774x44] = 'red'
             } else {
                 if (_0xf774x3d[_0xf774x44].close > _0xf774x3d[_0xf774x44].open) {
                     ctx.fillStyle = '#53a15f';
-                    fon_svecha[_0xf774x44] = 'black'
+                    fon_svecha[_0xf774x44] = 'green'
                 } else {
                     if (_0xf774x3d[_0xf774x44].close === _0xf774x3d[_0xf774x44].open) {
                         ctx.fillStyle = '#808080';
@@ -1234,11 +1234,11 @@ const Sign = function () {
                     colorstyle = ctx.fillStyle
                     switch (colorstyle) {
                         case '#930000':
-                            tick_color[length] = 'black'
+                            tick_color[length] = 'red'
                             break;
 
                         case '#005811':
-                            tick_color[length] = 'black'
+                            tick_color[length] = 'green'
                             break;
                     }
 
@@ -1325,10 +1325,10 @@ const Sign = function () {
                     if (tickszero[0] !== undefined) {
                         if (tickszero[0][0] === candlesdata[i][length][0]) {
                             zeroticksell0 += candlesdata[i][length][1]
-                            if (tick_color[length] === 'black') {
+                            if (tick_color[length] === 'red') {
                                 zeroticksell0_s -= candlesdata[i][length][1]
                             }
-                            if (tick_color[length] === 'black') {
+                            if (tick_color[length] === 'green') {
                                 zeroticksell0_b += candlesdata[i][length][1]
                             }
                             tickszero[0][2] = i
@@ -1337,10 +1337,10 @@ const Sign = function () {
                     if (tickszero[1] !== undefined) {
                         if (tickszero[1][0] === candlesdata[i][length][0]) {
                             zeroticksell1 += candlesdata[i][length][1]
-                            if (tick_color[length] === 'black') {
+                            if (tick_color[length] === 'red') {
                                 zeroticksell1_s -= candlesdata[i][length][1]
                             }
-                            if (tick_color[length] === 'black') {
+                            if (tick_color[length] === 'green') {
                                 zeroticksell1_b += candlesdata[i][length][1]
                             }
                             tickszero[1][2] = i
@@ -1349,10 +1349,10 @@ const Sign = function () {
                     if (tickszero[2] !== undefined) {
                         if (tickszero[2][0] === candlesdata[i][length][0]) {
                             zeroticksell2 += candlesdata[i][length][1]
-                            if (tick_color[length] === 'black') {
+                            if (tick_color[length] === 'red') {
                                 zeroticksell2_s -= candlesdata[i][length][1]
                             }
-                            if (tick_color[length] === 'black') {
+                            if (tick_color[length] === 'green') {
                                 zeroticksell2_b += candlesdata[i][length][1]
                             }
                             tickszero[2][2] = i
@@ -1361,10 +1361,10 @@ const Sign = function () {
                     if (tickszero[3] !== undefined) {
                         if (tickszero[3][0] === candlesdata[i][length][0]) {
                             zeroticksell3 += candlesdata[i][length][1]
-                            if (tick_color[length] === 'black') {
+                            if (tick_color[length] === 'red') {
                                 zeroticksell3_s -= candlesdata[i][length][1]
                             }
-                            if (tick_color[length] === 'black') {
+                            if (tick_color[length] === 'green') {
                                 zeroticksell3_b += candlesdata[i][length][1]
                             }
                             tickszero[3][2] = i
@@ -1373,10 +1373,10 @@ const Sign = function () {
                     if (tickszero[4] !== undefined) {
                         if (tickszero[4][0] === candlesdata[i][length][0]) {
                             zeroticksell4 += candlesdata[i][length][1]
-                            if (tick_color[length] === 'black') {
+                            if (tick_color[length] === 'red') {
                                 zeroticksell4_s -= candlesdata[i][length][1]
                             }
-                            if (tick_color[length] === 'black') {
+                            if (tick_color[length] === 'green') {
                                 zeroticksell4_b += candlesdata[i][length][1]
                             }
                             tickszero[4][2] = i
@@ -1385,10 +1385,10 @@ const Sign = function () {
                     if (tickszero[5] !== undefined) {
                         if (tickszero[5][0] === candlesdata[i][length][0]) {
                             zeroticksell5 += candlesdata[i][length][1]
-                            if (tick_color[length] === 'black') {
+                            if (tick_color[length] === 'red') {
                                 zeroticksell5_s -= candlesdata[i][length][1]
                             }
-                            if (tick_color[length] === 'black') {
+                            if (tick_color[length] === 'green') {
                                 zeroticksell5_b += candlesdata[i][length][1]
                             }
                             tickszero[5][2] = i
@@ -1397,10 +1397,10 @@ const Sign = function () {
                     if (tickszero[6] !== undefined) {
                         if (tickszero[6][0] === candlesdata[i][length][0]) {
                             zeroticksell6 += candlesdata[i][length][1]
-                            if (tick_color[length] === 'black') {
+                            if (tick_color[length] === 'red') {
                                 zeroticksell6_s -= candlesdata[i][length][1]
                             }
-                            if (tick_color[length] === 'black') {
+                            if (tick_color[length] === 'green') {
                                 zeroticksell6_b += candlesdata[i][length][1]
                             }
                             tickszero[6][2] = i
@@ -1409,10 +1409,10 @@ const Sign = function () {
                     if (tickszero[7] !== undefined) {
                         if (tickszero[7][0] === candlesdata[i][length][0]) {
                             zeroticksell7 += candlesdata[i][length][1]
-                            if (tick_color[length] === 'black') {
+                            if (tick_color[length] === 'red') {
                                 zeroticksell7_s -= candlesdata[i][length][1]
                             }
-                            if (tick_color[length] === 'black') {
+                            if (tick_color[length] === 'green') {
                                 zeroticksell7_b += candlesdata[i][length][1]
                             }
                             tickszero[7][2] = i
@@ -1421,10 +1421,10 @@ const Sign = function () {
                     if (tickszero[8] !== undefined) {
                         if (tickszero[8][0] === candlesdata[i][length][0]) {
                             zeroticksell8 += candlesdata[i][length][1]
-                            if (tick_color[length] === 'black') {
+                            if (tick_color[length] === 'red') {
                                 zeroticksell8_s -= candlesdata[i][length][1]
                             }
-                            if (tick_color[length] === 'black') {
+                            if (tick_color[length] === 'green') {
                                 zeroticksell8_b += candlesdata[i][length][1]
                             }
                             tickszero[8][2] = i
@@ -1433,10 +1433,10 @@ const Sign = function () {
                     if (tickszero[9] !== undefined) {
                         if (tickszero[9][0] === candlesdata[i][length][0]) {
                             zeroticksell9 += candlesdata[i][length][1]
-                            if (tick_color[length] === 'black') {
+                            if (tick_color[length] === 'red') {
                                 zeroticksell9_s -= candlesdata[i][length][1]
                             }
-                            if (tick_color[length] === 'black') {
+                            if (tick_color[length] === 'green') {
                                 zeroticksell9_b += candlesdata[i][length][1]
                             }
                             tickszero[9][2] = i
@@ -1445,10 +1445,10 @@ const Sign = function () {
                     if (tickszero[10] !== undefined) {
                         if (tickszero[10][0] === candlesdata[i][length][0]) {
                             zeroticksell10 += candlesdata[i][length][1]
-                            if (tick_color[length] === 'black') {
+                            if (tick_color[length] === 'red') {
                                 zeroticksell10_s -= candlesdata[i][length][1]
                             }
-                            if (tick_color[length] === 'black') {
+                            if (tick_color[length] === 'green') {
                                 zeroticksell10_b += candlesdata[i][length][1]
                             }
                             tickszero[10][2] = i
@@ -1457,10 +1457,10 @@ const Sign = function () {
                     if (tickszero[11] !== undefined) {
                         if (tickszero[11][0] === candlesdata[i][length][0]) {
                             zeroticksell11 += candlesdata[i][length][1]
-                            if (tick_color[length] === 'black') {
+                            if (tick_color[length] === 'red') {
                                 zeroticksell11_s -= candlesdata[i][length][1]
                             }
-                            if (tick_color[length] === 'black') {
+                            if (tick_color[length] === 'green') {
                                 zeroticksell11_b += candlesdata[i][length][1]
                             }
                             tickszero[11][2] = i
@@ -1469,10 +1469,10 @@ const Sign = function () {
                     if (tickszero[12] !== undefined) {
                         if (tickszero[12][0] === candlesdata[i][length][0]) {
                             zeroticksell12 += candlesdata[i][length][1]
-                            if (tick_color[length] === 'black') {
+                            if (tick_color[length] === 'red') {
                                 zeroticksell12_s -= candlesdata[i][length][1]
                             }
-                            if (tick_color[length] === 'black') {
+                            if (tick_color[length] === 'green') {
                                 zeroticksell12_b += candlesdata[i][length][1]
                             }
                             tickszero[12][2] = i
@@ -1481,10 +1481,10 @@ const Sign = function () {
                     if (tickszero[13] !== undefined) {
                         if (tickszero[13][0] === candlesdata[i][length][0]) {
                             zeroticksell13 += candlesdata[i][length][1]
-                            if (tick_color[length] === 'black') {
+                            if (tick_color[length] === 'red') {
                                 zeroticksell13_s -= candlesdata[i][length][1]
                             }
-                            if (tick_color[length] === 'black') {
+                            if (tick_color[length] === 'green') {
                                 zeroticksell13_b += candlesdata[i][length][1]
                             }
                             tickszero[13][2] = i
@@ -1493,10 +1493,10 @@ const Sign = function () {
                     if (tickszero[14] !== undefined) {
                         if (tickszero[14][0] === candlesdata[i][length][0]) {
                             zeroticksell14 += candlesdata[i][length][1]
-                            if (tick_color[length] === 'black') {
+                            if (tick_color[length] === 'red') {
                                 zeroticksell14_s -= candlesdata[i][length][1]
                             }
-                            if (tick_color[length] === 'black') {
+                            if (tick_color[length] === 'green') {
                                 zeroticksell14_b += candlesdata[i][length][1]
                             }
                             tickszero[14][2] = i
@@ -1505,10 +1505,10 @@ const Sign = function () {
                     if (tickszero[15] !== undefined) {
                         if (tickszero[15][0] === candlesdata[i][length][0]) {
                             zeroticksell15 += candlesdata[i][length][1]
-                            if (tick_color[length] === 'black') {
+                            if (tick_color[length] === 'red') {
                                 zeroticksell15_s -= candlesdata[i][length][1]
                             }
-                            if (tick_color[length] === 'black') {
+                            if (tick_color[length] === 'green') {
                                 zeroticksell15_b += candlesdata[i][length][1]
                             }
                             tickszero[15][2] = i
@@ -1517,10 +1517,10 @@ const Sign = function () {
                     if (tickszero[16] !== undefined) {
                         if (tickszero[16][0] === candlesdata[i][length][0]) {
                             zeroticksell16 += candlesdata[i][length][1]
-                            if (tick_color[length] === 'black') {
+                            if (tick_color[length] === 'red') {
                                 zeroticksell16_s -= candlesdata[i][length][1]
                             }
-                            if (tick_color[length] === 'black') {
+                            if (tick_color[length] === 'green') {
                                 zeroticksell16_b += candlesdata[i][length][1]
                             }
                             tickszero[16][2] = i
@@ -1529,10 +1529,10 @@ const Sign = function () {
                     if (tickszero[17] !== undefined) {
                         if (tickszero[17][0] === candlesdata[i][length][0]) {
                             zeroticksell17 += candlesdata[i][length][1]
-                            if (tick_color[length] === 'black') {
+                            if (tick_color[length] === 'red') {
                                 zeroticksell17_s -= candlesdata[i][length][1]
                             }
-                            if (tick_color[length] === 'black') {
+                            if (tick_color[length] === 'green') {
                                 zeroticksell17_b += candlesdata[i][length][1]
                             }
                             tickszero[17][2] = i
@@ -1541,10 +1541,10 @@ const Sign = function () {
                     if (tickszero[18] !== undefined) {
                         if (tickszero[18][0] === candlesdata[i][length][0]) {
                             zeroticksell18 += candlesdata[i][length][1]
-                            if (tick_color[length] === 'black') {
+                            if (tick_color[length] === 'red') {
                                 zeroticksell18_s -= candlesdata[i][length][1]
                             }
-                            if (tick_color[length] === 'black') {
+                            if (tick_color[length] === 'green') {
                                 zeroticksell18_b += candlesdata[i][length][1]
                             }
                             tickszero[18][2] = i
@@ -1553,10 +1553,10 @@ const Sign = function () {
                     if (tickszero[19] !== undefined) {
                         if (tickszero[19][0] === candlesdata[i][length][0]) {
                             zeroticksell19 += candlesdata[i][length][1]
-                            if (tick_color[length] === 'black') {
+                            if (tick_color[length] === 'red') {
                                 zeroticksell19_s -= candlesdata[i][length][1]
                             }
-                            if (tick_color[length] === 'black') {
+                            if (tick_color[length] === 'green') {
                                 zeroticksell19_b += candlesdata[i][length][1]
                             }
                             tickszero[19][2] = i
@@ -1565,10 +1565,10 @@ const Sign = function () {
                     if (tickszero[20] !== undefined) {
                         if (tickszero[20][0] === candlesdata[i][length][0]) {
                             zeroticksell20 += candlesdata[i][length][1]
-                            if (tick_color[length] === 'black') {
+                            if (tick_color[length] === 'red') {
                                 zeroticksell20_s -= candlesdata[i][length][1]
                             }
-                            if (tick_color[length] === 'black') {
+                            if (tick_color[length] === 'green') {
                                 zeroticksell20_b += candlesdata[i][length][1]
                             }
                             tickszero[20][2] = i
@@ -1776,10 +1776,10 @@ const Sign = function () {
             y = Y_price[i]
             difpoc = pocmax - pocnextmax
 
-            if (i <= 999999999) {
-                buyarrow = "⇧"
-                sellarrow = "⇩"
-				indecisionarrow = ""
+            if (i <= 1) {
+                buyarrow = "⭡"
+                sellarrow = "⭣"
+                indecisionarrow = "⭥"
 
                 formatpricemax = pricemax === 0 ? pricemax : +pricemax.toString().split('.')[1]
                 formatpricenextmax = pricenextmax2 === 0 ? pricenextmax2 : +pricenextmax2.toString().split('.')[1]
@@ -1979,30 +1979,30 @@ const Sign = function () {
                         arrow_candle[i] = indecisionarrow
                         break;
 
-                    case fon_svecha[i] === 'black' && color_trend[i] === 'rgba(210, 59, 59, 1)':
+                    case fon_svecha[i] === 'green' && color_trend[i] === 'rgba(210, 59, 59, 1)':
                         arrow_candle[i] = buyarrow
                         color_candle[i] = 'rgb(255,224,0)'
                         break;
-                    case fon_svecha[i] === 'black' && color_trend[i] === 'rgba(86, 176, 104, 1)':
+                    case fon_svecha[i] === 'red' && color_trend[i] === 'rgba(86, 176, 104, 1)':
                         arrow_candle[i] = sellarrow
                         color_candle[i] = 'rgb(255,224,0)'
                         break;
 
-                    case fon_svecha[i] === 'black' && color_trend[i] === 'rgba(86, 176, 104, 1)':
+                    case fon_svecha[i] === 'green' && color_trend[i] === 'rgba(86, 176, 104, 1)':
                         arrow_candle[i] = buyarrow
                         color_candle[i] = 'rgb(4,246,255)'
                         break;
-                    case fon_svecha[i] === 'black' && color_trend[i] === 'rgba(210, 59, 59, 1)':
+                    case fon_svecha[i] === 'red' && color_trend[i] === 'rgba(210, 59, 59, 1)':
                         arrow_candle[i] = sellarrow
                         color_candle[i] = 'rgb(4,246,255)'
                         break;
 
-                    case fon_svecha[i] === 'black' && color_trend[i] === 'rgb(255,255,255)':
+                    case fon_svecha[i] === 'green' && color_trend[i] === 'rgb(255,255,255)':
                         arrow_candle[i] = buyarrow
                         color_candle[i] = 'rgb(255,225,255)'
                         break;
 
-                    case fon_svecha[i] === 'black' && color_trend[i] === 'rgb(255,255,255)':
+                    case fon_svecha[i] === 'red' && color_trend[i] === 'rgb(255,255,255)':
                         arrow_candle[i] = sellarrow
                         color_candle[i] = 'rgb(255,225,255)'
                         break;
@@ -2103,7 +2103,7 @@ const Sign = function () {
                 procent_rassh = (max_p_find * 100 / _0xf774x55);
                 procent_rassh = parseFloat(procent_rassh.toFixed());
                 ctx.font = str_min_size + 'px Verdana';
-                if (fon_svecha[i] === 'black') {
+                if (fon_svecha[i] === 'red') {
                     if (procent_rassh < 50) {
                         _0xf774x56 = 'down'
                     } else {
@@ -2117,7 +2117,7 @@ const Sign = function () {
                     }
                     procent_rassh = 100 - procent_rassh
                 }
-                if (fon_svecha[i] === 'black') {
+                if (fon_svecha[i] === 'green') {
                     if (procent_rassh < 50) {
                         _0xf774x56 = 'up'
                     } else {
@@ -2172,8 +2172,8 @@ const Sign = function () {
                     arrow_down_y = _0xf774x6f + 330;
                     ctx.font = ur_str_size + 'px Verdana';
                     if (color_text === '#d75c48') {
-                        ArrowDraw(ctx, 'up', _0xf774x70, _0xf774x71, 150, 150, 'black', 1, 'str');
-                        ArrowDraw(ctx, 'down', arrow_down_x, arrow_down_y, 150, 150, 'black', 1, 'str');
+                        ArrowDraw(ctx, 'up', _0xf774x70, _0xf774x71, 150, 150, 'green', 1, 'str');
+                        ArrowDraw(ctx, 'down', arrow_down_x, arrow_down_y, 150, 150, 'red', 1, 'fill');
                         ctx.fillText(_0xf774x69, _0xf774x70 + 30, arrow_down_y / 1.6);
                         if (strelki_procent === 1) {
                             ctx.fillStyle = '#fff';
@@ -2182,8 +2182,8 @@ const Sign = function () {
                         }
                     } else {
                         if (color_text === '#008f1d') {
-                            ArrowDraw(ctx, 'up', _0xf774x70, _0xf774x71, 150, 150, 'black', 1, 'str');
-                            ArrowDraw(ctx, 'down', arrow_down_x, arrow_down_y, 150, 150, 'black', 1, 'str');
+                            ArrowDraw(ctx, 'up', _0xf774x70, _0xf774x71, 150, 150, 'green', 1, 'fill');
+                            ArrowDraw(ctx, 'down', arrow_down_x, arrow_down_y, 150, 150, 'red', 1, 'str');
                             ctx.fillText(_0xf774x69, _0xf774x70 + 30, arrow_down_y / 1.6);
                             if (strelki_procent === 1) {
                                 ctx.fillStyle = '#fff';
@@ -2192,8 +2192,8 @@ const Sign = function () {
                             }
                         } else {
                             if (color_text === '#ffffff') {
-                                ArrowDraw(ctx, 'up', _0xf774x70, _0xf774x71, 150, 150, 'black', 1, 'str');
-                                ArrowDraw(ctx, 'down', arrow_down_x, arrow_down_y, 150, 150, 'black', 1, 'str');
+                                ArrowDraw(ctx, 'up', _0xf774x70, _0xf774x71, 150, 150, 'green', 1, 'str');
+                                ArrowDraw(ctx, 'down', arrow_down_x, arrow_down_y, 150, 150, 'red', 1, 'str');
                                 ctx.fillText((_0xf774x69 + ' закр. на макс. объёме'), _0xf774x70 + 30, arrow_down_y / 1.6);
                                 if (strelki_procent === 1) {
                                     ctx.fillStyle = '#fff';
@@ -2734,7 +2734,7 @@ const Sign = function () {
         divscrol.hide('blind')
     });
     period.change(function () {
-        if ($(this).val() < 1) {
+        if ($(this).val() < 2) {
             $(this).val(2)
         }
         if ($(this).val() > 72) {
@@ -2782,11 +2782,10 @@ const Sign = function () {
     main.soc($('#pair').attr('val'), $('#size').val())
 
     let _0xf774x7b = document.createElement('a');
-	 _0xf774x7b.setAttribute('href', 'https://t.me/tsbinary');
     let _0xf774x7c = document.createElement('LABEL');
-    _0xf774x7c.textContent = ' Ver 4.0 ';
-    _0xf774x7c.style.right = '20px';
-    _0xf774x7c.style.bottom = '10px';
+    _0xf774x7c.textContent = ' Ver 0.0.3.1 ';
+    _0xf774x7c.style.right = '15px';
+    _0xf774x7c.style.bottom = '5px';
     _0xf774x7c.style.position = 'absolute';
     _0xf774x7b.appendChild(_0xf774x7c);
     document.body.appendChild(_0xf774x7b);
