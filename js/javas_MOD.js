@@ -1777,9 +1777,9 @@ const Sign = function () {
             difpoc = pocmax - pocnextmax
 
             if (i <= 1) {
-                buyarrow = "⭡"
-                sellarrow = "⭣"
-                indecisionarrow = "⭥"
+                buyarrow = "⇧"
+                sellarrow = "⇩"
+                indecisionarrow = ""
 
                 formatpricemax = pricemax === 0 ? pricemax : +pricemax.toString().split('.')[1]
                 formatpricenextmax = pricenextmax2 === 0 ? pricenextmax2 : +pricenextmax2.toString().split('.')[1]
@@ -2782,10 +2782,9 @@ const Sign = function () {
     main.soc($('#pair').attr('val'), $('#size').val())
 
     let _0xf774x7b = document.createElement('a');
+_0xf774x7b.setAttribute('href', 'https://t.me/tsbinary');
     let _0xf774x7c = document.createElement('LABEL');
-    _0xf774x7c.textContent = ' Ver 0.0.3.1 ';
-    _0xf774x7c.style.right = '15px';
-    _0xf774x7c.style.bottom = '5px';
+    _0xf774x7c.textContent = ' Ver 4.0 '; _0xf774x7c.style.right = '20px'; _0xf774x7c.style.bottom = '10px';
     _0xf774x7c.style.position = 'absolute';
     _0xf774x7b.appendChild(_0xf774x7c);
     document.body.appendChild(_0xf774x7b);
